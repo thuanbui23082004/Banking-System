@@ -127,15 +127,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Login.cpp" />
+    <ClCompile Include="MainClient.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Register.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Admin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Human.h" />
+    <ClInclude Include="Login.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MainClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -144,6 +156,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainClient.resx">
+      <DependentUpon>MainClient.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +173,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="InfoAccountLogin.txt" />
     <Text Include="InfoCustomer.txt" />
   </ItemGroup>
   <ItemGroup>

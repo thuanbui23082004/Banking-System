@@ -1,4 +1,5 @@
-﻿#include "Customer.h"
+﻿#include <sstream>
+#include "Customer.h"
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -6,6 +7,7 @@
 #include <Windows.h>
 #include <cstring>
 #include "string.h"
+#include <regex> 
 
 using namespace std;
 
@@ -19,13 +21,19 @@ Customer::Customer()
 
 
 Customer::Customer(string name, string id, string sex, string address, string phone, string date,
-	string mail, std::string username, string password, int accountNumber)
+	string mail, std::string username, string password, string accountNumber)
 	: Human(name, id, sex, address, phone, date, mail)
 {
 	this->username = username;
 	this->password = password;
-	this->balance = balance;
+	this->balance = 0;
 	this->accountNumber = accountNumber;
+}
+  
+Customer::Customer(string username, string password)
+{
+    this->username = username;
+    this->password = password;
 }
 std::string Customer::getUsername()
 {
@@ -56,7 +64,10 @@ void Customer::setUsername(std::string username)
 	// Nếu hợp lệ, gán vào thuộc tính username
 	this->username = username;
 }
-
+void Customer::show() {
+    cout << "ID: " << this->getId() << endl;
+    cout << "Name: " << this->getName() << endl;
+}
 string Customer::getPassword()
 {
 	return this->password;
@@ -73,6 +84,7 @@ void Customer::setPassword(string password)
 	// Nếu hợp lệ, gán vào thuộc tính password
 	this->password = password;
 }
+
 
 int Customer::getBalance()
 {
@@ -93,110 +105,69 @@ void Customer::setAccountNumber(string accountNumber)
 {
 	this->accountNumber = accountNumber;
 }
-//void Customer::createAccount()
-//{
-//	string username;
-//	getline(cin, username);
-//	setUsername(username);
-//	cout << "Nhap mat khau: ";
-//	string password;
-//	getline(cin, password);
-//	setPassword(password);
-//	cout << "Nhap so du: ";
-//	int balance;
-//	cin >> balance;
-//	setBalance(balance);
-//	cout << "Nhap so tai khoan: ";
-//	string accountNumber;
-//	getline(cin, accountNumber);
-//	setAccountNumber(accountNumber);
-//}
 
-void Customer::saveCustomerToFile(ofstream& o)
+void Customer::saveCustomerToFile()
 {
 	
-	if (o.is_open()) {
-		o << left << setw(10) << this->getId() << "," << setw(25) << getName() << "," << setw(5) << this->getSex() << ","
-			<< setw(17) << getDateOfBirth() << "," << setw(15) << this->getAddress() << ","
-			<< setw(15) << this->getAge() << "," << setw(15) << this->getPhoneNumber() << ","
-			<< setw(15) << this->getPhoneNumber() << "," << setw(15) << this->getEmail() << endl;
-	}
+    ofstream o("InfoCustomer.txt", ios::app);  // Mở file ở chế độ ghi tiếp (append)
+
+    if (!o.is_open()) {
+        cerr << "Error: Could not open file for writing." << endl;
+        return;
+    }
+
+    o << left << setw(10) << this->getId() << "," << setw(25) << getName() << "," << setw(5) << this->getSex() << ","
+        << setw(17) << getDateOfBirth() << "," << setw(15) << this->getAddress() << ","
+        << setw(15) << this->getAge() << "," << setw(15) << this->getPhoneNumber() << "," << setw(30) << this->getEmail() << "," <<
+        setw(15) << this->getUsername() << "," << setw(15) << this->getPassword() << "," <<setw(15)<<this->getAccountNumber()<< "," <<setw(15)<<this->getBalance()<<endl;
+
+    o.close();  // Đóng file sau khi ghi
 }
+void trim(string& s) {
+    s = regex_replace(s, regex("\\s+$"), "");  // Xóa khoảng trắng cuối chuỗi
+}
+bool Customer::checkLogin() {
+    ifstream file("InfoCustomer.txt");
+    if (!file) {
+        cout << "Error: Could not open file!" << endl;
+        return false;
+    }
+    string idTxt, nameTxt, lineTxt, UsernameTxt, PasswordTxt, sexTxt, dateOfBirthTxt, addressTxt, ageTxt, phoneNumberTxt, emailTxt, accountNumberTxt, balanceTxt;
+    while (getline(file, lineTxt)) {
+        stringstream ss(lineTxt);
+        getline(ss, idTxt, ','); trim(idTxt);
+        getline(ss, nameTxt, ','); trim(nameTxt);
+        getline(ss, sexTxt, ','); trim(sexTxt);
+        getline(ss, dateOfBirthTxt, ','); trim(dateOfBirthTxt);
+        getline(ss, addressTxt, ','); trim(addressTxt);
+        getline(ss, ageTxt, ','); trim(ageTxt);
+        getline(ss, phoneNumberTxt, ','); trim(phoneNumberTxt);
+        getline(ss, emailTxt, ','); trim(emailTxt);
+        getline(ss, UsernameTxt, ','); trim(UsernameTxt);
+        getline(ss, PasswordTxt, ','); trim(PasswordTxt);
+        getline(ss, accountNumberTxt, ','); trim(accountNumberTxt);
+        getline(ss, balanceTxt, ','); trim(balanceTxt);
+      
+       
+        if ( this->username==UsernameTxt &&  this->password==PasswordTxt) {
+            setId(idTxt);
+            setName(nameTxt);
+            setSex(sexTxt);
+            setDateOfBirth(dateOfBirthTxt);
+            setAddress(addressTxt);
+            setAgeByDateOfBirth(dateOfBirthTxt);
+            setPhoneNumber(phoneNumberTxt);
+            setEmail(emailTxt);
+            setBalance(stoi(balanceTxt));
+            setAccountNumber(accountNumberTxt);
+            file.close();
+            return true;
+        }
+    }
 
-//Customer Customer::getCustomerById(int id) {
-//    ifstream i("Player.txt");
-//    if (!i.is_open()) // Thêm kiểm tra !  
-//    {
-//        cout << "Khong the mo file Player.txt!\n";
-//        return Player(); // Trả về một đối tượng Player mặc định nếu không mở được file  
-//    }
-//
-//    string tmp;
-//    string::getline(i, tmp); // Đọc dòng tiêu đề và bỏ qua nó  
-//
-//    while (string::getline(i, tmp)) // Sử dụng getline làm điều kiện vòng lặp  
-//    {
-//        // Loại bỏ khoảng trắng ở đầu và cuối dòng  
-//        tmp.trim(); // Giả sử string có hàm trim()  
-//        if (tmp.empty() || tmp[0] == '\n') // Kiểm tra dòng trống sau khi trim  
-//        {
-//            continue;
-//        }
-//        int check = 1;
-//        bool status = false;
-//        string id, name, date, address, age, numberClo, yellowCard, redCard, goal, nameTeam;
-//        id = name = date = address = age = numberClo = yellowCard = redCard = goal = nameTeam = ""; // Khởi tạo các chuỗi  
-//
-//        for (int k = 0; k < tmp.size(); k++) // Sửa thành k để tránh trùng lặp biến i  
-//        {
-//            if (tmp[k] == ',')
-//            {
-//                status = false;
-//                check++;
-//                continue;
-//            }
-//            status = true; // Đặt status = true khi bắt đầu đọc một trường  
-//            if (check == 1 && status)
-//                id = id + tmp[k];
-//            else if (check == 2 && status)
-//                name = name + tmp[k];
-//            else if (check == 3 && status)
-//                date = date + tmp[k];
-//            else if (check == 4 && status)
-//                address = address + tmp[k];
-//            else if (check == 5 && status)
-//                age = age + tmp[k];
-//            else if (check == 6 && status)
-//                numberClo = numberClo + tmp[k];
-//            else if (check == 7 && status)
-//                yellowCard = yellowCard + tmp[k];
-//            else if (check == 8 && status)
-//                redCard = redCard + tmp[k];
-//            else if (check == 9 && status)
-//                goal = goal + tmp[k];
-//            else if (check == 10 && status && tmp[k] != '\n')
-//                nameTeam = nameTeam + tmp[k];
-//        }
-//
-//        if (id == idF)
-//        {
-//            Player p(id, name, date, address, nameTeam, string::toint(numberClo), string::toint(goal), string::toint(yellowCard), string::toint(redCard));
-//            i.close(); // Đóng file trước khi trả về  
-//            return p;
-//        }
-//    }
-//    i.close(); // Đóng file nếu không tìm thấy cầu thủ  
-//    return Player(); // Trả về một đối tượng Player mặc định nếu không tìm thấy  
-//}
-//
-//
-//
-
-
-
-
-
-
+    file.close();
+    return false;
+}
 
 
 Customer::~Customer()

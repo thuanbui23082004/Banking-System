@@ -7,6 +7,7 @@
 
 
 
+
 using namespace std;
 
 #ifndef CUSTOMER_H
@@ -22,7 +23,8 @@ private:
 public:
 
 	Customer();
-	Customer(string n, string id, string sex, string ad, string te, string d, string mail, std::string username, string password , int accountNumber);
+	Customer(string n, string id, string sex, string ad, string te, string d, string mail, std::string username, string password , string accountNumber);
+    Customer(string username, string password);
 	~Customer();
 	std::string getUsername();
 	void setUsername(std::string);
@@ -32,13 +34,15 @@ public:
 	void setBalance(int);
 	string getAccountNumber();
 	void setAccountNumber(string);
-
+    void checkLogin(string username, string password);
+    void getCustomerbyFile();
+    void show();
 	//t?o tài kho?n m?i
 	//void createAccount();
 
 
 	//xu li voi file 
-	void saveCustomerToFile(ofstream&);
+	void saveCustomerToFile();
 
 	//register
 
@@ -47,6 +51,8 @@ public:
 	//void changePassword();
 
 	//logn in
+    bool checkLogin();
+    void login();
 	//bool checkLogin(string username, string password);
 
 

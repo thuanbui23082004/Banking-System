@@ -38,10 +38,13 @@ public:
 	int getAge();
 	string getSex();
 	string getPhoneNumber();
+    void setPhoneNumber(string);
 	string getEmail();
+    void setEmail(string);
 	string standardizeName(string);
 	//int string_to_int(string);
 	int setAgeByDateOfBirth(string);
+    void getAllPlayerFromFiles();
 };
 
 

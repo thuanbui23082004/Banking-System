@@ -45,6 +45,7 @@ Human::Human() {
 }
 Human::Human(string n, string id, string sex, string ad, string te, string d, string mail)
 {
+    this->dateOfBirth = d;
 	this->sex = sex;
     this->id = id;
     this->address = ad;
@@ -169,6 +170,14 @@ string Human::getPhoneNumber() {
 }
 string Human::getEmail() {
     return this->email;
+}
+
+void Human::setEmail(string email) {
+    this->email = email;
+}
+
+void Human::setPhoneNumber(string phone) {
+    this->phone = phone;
 }
 Human::~Human()
 {

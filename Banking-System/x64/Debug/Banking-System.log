@@ -1,4 +1,46 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Banking-System.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Admin.cpp
+  Customer.cpp
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(46,11): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(46,11): warning C4566: character represented by universal-character-name '\u1EEB' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(46,11): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(46,11): warning C4566: character represented by universal-character-name '\u1EBF' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(46,11): warning C4566: character represented by universal-character-name '\u1EF1' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u1EC9' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u1EE9' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u1EEF' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(53,12): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u1EE9' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(60,11): warning C4566: character represented by universal-character-name '\u1EAF' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(80,11): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(80,11): warning C4566: character represented by universal-character-name '\u1EEB' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(80,11): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(80,11): warning C4566: character represented by universal-character-name '\u1EBF' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Customer.cpp(80,11): warning C4566: character represented by universal-character-name '\u1EF1' cannot be represented in the current code page (1252)
+  Human.cpp
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(19,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(95,17): warning C4566: character represented by universal-character-name '\u1ED7' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(95,17): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(95,17): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(105,17): warning C4566: character represented by universal-character-name '\u1ED7' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(105,17): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(105,17): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(92,9): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(135,9): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\Human.cpp(148,15): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Login.cpp
+  MainClient.cpp
+  MyForm.cpp
   Program.cpp
-  Customer.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Register.cpp
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generating Code...
+  Admin.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Banking-System.vcxproj -> C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\x64\Debug\BankingSystem.exe

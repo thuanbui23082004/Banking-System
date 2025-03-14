@@ -1,4 +1,14 @@
 C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking-System.vcxproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Login.resources
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.MainClient.resources
 C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.MyForm.resources
 C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Register.resources
 C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking-System.vcxproj.GenerateResource.cache
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking-System.vcxproj.AssemblyReference.cache
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Admin.resources
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Login.resources
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.MainClient.resources
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.MyForm.resources
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Register.resources
+C:\Users\lapto\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking-System.vcxproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Năm 3\OOP\Banking-System\Banking-System\x64\Debug\Banking_System.Admin.resources
